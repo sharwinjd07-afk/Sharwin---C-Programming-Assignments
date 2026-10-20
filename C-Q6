@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, remainder;
+    int binary[32];
+    int i = 0;
+
+    scanf("%d", &n);
+
+    if (n == 0)
+    {
+        printf("0\n");
+        return 0;
+    }
+
+    while (n > 0)
+    {
+        remainder = n % 2;
+        binary[i] = remainder;
+        n = n / 2;
+        i++;
+    }
+
+    for (i = i - 1; i >= 0; i--)
+    {
+        printf("%d", binary[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
