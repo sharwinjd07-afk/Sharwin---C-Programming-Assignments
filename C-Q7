@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    float distance, fare = 100, discount;
+    int member;
+
+    printf("Enter distance in km: ");
+    scanf("%f", &distance);
+
+    printf("Is the customer a member? (1=Yes, 0=No): ");
+    scanf("%d", &member);
+
+    if (distance > 10)
+    {
+        fare = fare + (distance - 10) * 20;
+    }
+
+    if (member == 1)
+    {
+        discount = fare * 0.10;
+        fare = fare - discount;
+    }
+ 
+    printf("Final Fare: Rs.%.2f\n", fare);
+
+    return 0;
+}
